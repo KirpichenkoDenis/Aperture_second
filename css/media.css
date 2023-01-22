@@ -103,6 +103,90 @@
     .list {
         column-gap: 40px;
     }
+
+    .nav-but-wrap {
+        display: inline-block;
+    }
+
+    .nav {
+        position: fixed;
+        z-index: 98;
+        top: 0;
+        left: 0;
+    }
+
+    .nav__content {
+        position: fixed;
+        visibility: hidden;
+        top: 50%;
+        margin-top: 20px;
+        webkit-transform: translate(0%, -50%);
+        transform: translate(0%, -50%);
+        width: 100%;
+        text-align: center;
+    }
+    .nav__list-item {
+        position: relative;
+        display: block;
+        -webkit-transition-delay: 0.8s;
+        transition-delay: 0.8s;
+        opacity: 0;
+        text-align: center;
+        color: #fff;
+        overflow: hidden;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 8vh;
+        font-weight: 900;
+        line-height: 1.15;
+        letter-spacing: 3px;
+        -webkit-transform: translate(100px, 0%);
+        transform: translate(100px, 0%);
+        -webkit-transition: opacity .2s ease, -webkit-transform .3s ease;
+        transition: opacity .2s ease, -webkit-transform .3s ease;
+        transition: opacity .2s ease, transform .3s ease;
+        transition: opacity .2s ease, transform .3s ease, -webkit-transform .3s ease;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+    .nav__list-item a{
+        position: relative;
+        text-decoration: none;
+        color: rgba(255,255,255,0.6);
+        overflow: hidden;
+        cursor: pointer;
+        padding-left: 5px;
+        padding-right: 5px;
+        font-weight: 900;
+        z-index: 2;
+        display: inline-block;
+        text-transform: uppercase;
+        -webkit-transition: all 200ms linear;
+        transition: all 200ms linear;
+    }
+    header nav ul{
+        display: inherit;
+
+    }
+    nav__list-item a:after{
+        position: absolute;
+        content: '';
+        top: 50%;
+        margin-top: -2px;
+        left: 50%;
+        width: 0;
+        height: 0;
+        opacity: 0;
+        background-color: #8167a9;
+        z-index: 1;
+        -webkit-transition: all 200ms linear;
+        transition: all 200ms linear;
+    }
+    .nav__list-item a:hover:after{
+        height: 4px;
+        opacity: 1;
+        left: 0;
+        width: 100%;
+    }
 }
 @media only screen and (max-width: 645px) {
     header nav li {
@@ -131,7 +215,6 @@
     .icon a {
         padding-bottom: 30px
     }
-
 
 }
 @media only screen and (max-width: 428px) {

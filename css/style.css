@@ -2,7 +2,10 @@
     padding: 0;
     margin: 0;
 }
-
+.logo{
+    z-index: 99;
+    position: relative;
+}
 header {
     background-color: #181818;
     padding: 24px 0;
@@ -137,12 +140,32 @@ section p {
 
 .icon {
     padding-top: 82px;
-    padding-left: 109px;
     padding-right: 109px;
     display: flex;
     justify-content: space-between;
     align-items: center;
 
+}
+.icon.owl-nav .owl-prev{
+    position: absolute;
+    left: -50%;
+    top: 100px;
+}
+.icon.owl-nav .owl-prev:after {
+    font-weight: 900;
+    font-family: "Font Awesome 6 Free";
+    content: "\f053";
+    color: white;
+    display: inline-block;
+}
+
+.icon a{
+    max-width: 128px;
+    display: inline-block;
+}
+.icon .owl-stage{
+    display: flex;
+    align-items: center;
 }
 
 .box {
@@ -630,3 +653,43 @@ footer {
     background-image: url("../images/Fill-1.svg");
     width: 10px;
 }
+
+/*Animation Get template*/
+
+.ui-widget-content {
+    color: #a5a5a5;
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    text-align: left;
+    border-radius: 8px;
+    background: linear-gradient(45deg, black, transparent);
+}
+
+
+.ui-dialog .ui-dialog-titlebar-close {
+    position: absolute;
+    right: 0.3em;
+    top: 50%;
+    border-radius: 50%;
+    border: 1px solid rgba(255, 255, 255, 0.75);
+    background-color: rgba(24, 24, 24, 0.5);
+    width: 20px;
+    margin: -10px 0;
+    padding: 1px;
+    height: 20px;
+    transition: ease-in-out 0.3s;
+}
+
+.ui-widget-header{
+    font-family: 'Poppins', sans-serif;
+    background: none;
+    color: #FFFFFF;
+    font-size: 15px;
+    }
+
+.ui-dialog .ui-dialog-titlebar-close:hover{
+    background-color: black;
+}
+.ui-icon-closethick{
+    background-image: none;
+    background-position-x: 55px;}
